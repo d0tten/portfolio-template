@@ -1,0 +1,200 @@
+/* style.css - Modern, responsive portfolio styles */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #181a20 url('https://raw.githubusercontent.com/creotiv/mountain-backgrounds/main/dark-mountains.svg') bottom center no-repeat;
+  background-size: cover;
+  color: #f3f3f3;
+  min-height: 100vh;
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+/* Add a subtle overlay to keep content readable */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, #181a20ee 0%, #23272fcc 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#app-content, header, main, footer {
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  color: #fff;
+  padding: 3rem 1rem 2rem 1rem;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.08em;
+  text-shadow: 0 2px 16px #000a;
+}
+
+header nav {
+  margin-top: 1.5rem;
+}
+
+header nav a {
+  color: #ffb347;
+  margin: 0 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.15rem;
+  transition: color 0.2s;
+}
+
+header nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #ffb34799;
+}
+
+main {
+  max-width: 900px;
+  margin: 3.5rem auto 2.5rem auto;
+  padding: 0 2rem;
+}
+
+section {
+  margin-bottom: 3.5rem;
+  padding: 2.5rem 2rem;
+  background: #23272f;
+  border-radius: 18px;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+  position: relative;
+  overflow: hidden;
+}
+
+section h2 {
+  font-size: 2rem;
+  color: #ffb347;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.04em;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.project {
+  background: linear-gradient(135deg, #232526 60%, #ffb34722 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.13);
+  padding: 1.5rem 1.2rem;
+  transition: transform 0.18s, box-shadow 0.18s;
+  border: 1.5px solid #2c2f36;
+  position: relative;
+}
+
+.project:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px #ffb34744, 0 2px 24px rgba(0,0,0,0.22);
+  border-color: #ffb347;
+}
+
+.project h3 {
+  color: #ffb347;
+  margin-bottom: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: 1.5px solid #2c2f36;
+  border-radius: 6px;
+  font-size: 1.08rem;
+  background: #23272f;
+  color: #f3f3f3;
+  transition: border 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: #ffb347;
+  outline: none;
+}
+
+button {
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc80 100%);
+  color: #232526;
+  border: none;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #ffb34733;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+button:hover {
+  background: #232526;
+  color: #ffb347;
+  transform: scale(1.04);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem 1.5rem 1rem;
+  background: #181a20;
+  color: #ffb347;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  border-top: 1.5px solid #23272f;
+}
+
+/* Eye-catching accent shapes */
+section::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #ffb34755 0%, transparent 80%);
+  z-index: 0;
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #ffb34733 0%, transparent 80%);
+  z-index: 0;
+}
+
+section > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  main {
+    padding: 0 0.5rem;
+  }
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+  section {
+    padding: 1.2rem 0.5rem;
+  }
+}
