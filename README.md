@@ -1,6 +1,6 @@
 # GitHub Portfolio Template
 
-# A Portfolio Template built collaboratively by Erik Corral and Drew Otten.
+## A Portfolio Template built collaboratively by Erik Corral and Drew Otten.
 
 A modern, responsive portfolio template using only HTML, CSS, and JavaScript. Easily customizable for your personal or professional use.
 
